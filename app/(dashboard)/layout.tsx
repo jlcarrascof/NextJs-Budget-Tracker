@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-function layout() {
+function layout({children}: {children: React.ReactNode}) {
   return (
     <div>layout</div>
   )
