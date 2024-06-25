@@ -1,10 +1,18 @@
 "use client";
 
+import { ThemeProvider } from 'next-themes';
 import React from 'react'
 
-function RootProviders() {
+function RootProviders({ children }: { children: React.ReactNode }) {
   return (
-    <div>RootProviders</div>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+    </ThemeProvider>
   )
 }
 
