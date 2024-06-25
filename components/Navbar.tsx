@@ -9,6 +9,12 @@ function Navbar() {
   );
 }
 
+const items = [
+    { label: "Dashboard", link: "/" },
+    { label: "Transactions", link: "/transactions" },
+    { label: "Manage", link: "/manage" },
+];
+
 function DesktopNavbar() {
     return (
         <div className="hidden border-separate border-b bg-background md:block">
