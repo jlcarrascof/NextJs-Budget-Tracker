@@ -22,6 +22,13 @@ function DesktopNavbar() {
                 <div className="flex h-[80px] min-h-[60px] items-center gap-x-4">
                     <Logo />
                     <div className="flex h-full">
+                        {items.map((item) => (
+                            <NavbarItem
+                                key={item.label}
+                                link={item.link}
+                                label={item.label}
+                            />
+                        ))}
                     </div>
                 </div>
             </nav>
