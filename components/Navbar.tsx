@@ -12,6 +12,7 @@ function Navbar() {
   return (
     <>
         <DesktopNavbar />
+        <MobileNavbar />
     </>
   );
 }
@@ -21,6 +22,10 @@ const items = [
     { label: "Transactions", link: "/transactions" },
     { label: "Manage", link: "/manage" },
 ];
+
+function MobileNavbar() {
+
+}
 
 function DesktopNavbar() {
     return (
