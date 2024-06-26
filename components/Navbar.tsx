@@ -3,10 +3,11 @@ import Logo from '@/components/Logo';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react'
-import { buttonVariants } from './ui/button';
+import React, { useState } from 'react'
+import { buttonVariants } from '@/components/ui/button';
 import { UserButton } from '@clerk/nextjs';
 import { ThemeSwitcherBtn } from '@/components/ThemeSwitcherBtn';
+import { Sheet } from '@/components/ui/sheet';
 
 function Navbar() {
   return (
@@ -24,7 +25,15 @@ const items = [
 ];
 
 function MobileNavbar() {
+    const [isOpen, setIsOpen] = useState(false);
 
+    return (
+        <div className="block border-separate bg-background md:hidden">
+            <nav className="container flex items-center justify-between px-8">
+                <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            </nav>
+        </div>
+    );
 }
 
 function DesktopNavbar() {
