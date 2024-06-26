@@ -37,3 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Control video - Session 2: 12:43.
 Control video - Session 2: 22:00. Before Responsive Design.
+Control video - Session 2: 25:44. Before The Cypress Meeting.
