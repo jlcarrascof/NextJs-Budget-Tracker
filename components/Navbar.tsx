@@ -40,7 +40,7 @@ function MobileNavbar() {
                     <SheetContent className="w-[400px] sm:w-[540px]" side="left">
                         <Logo />
                         <div className="flex flex-col gap-1 pt-4">
-                            {items.map((item) => (
+                            {items.map(item => (
                                 <NavbarItem
                                     key={item.label}
                                     link={item.link}
@@ -50,6 +50,11 @@ function MobileNavbar() {
                         </div>
                     </SheetContent>
                 </Sheet>
+
+                <div className="flex items-center gap-2">
+                    <ThemeSwitcherBtn />
+                    <UserButton afterSignOutUrl="/sign-in" />
+                </div>
             </nav>
         </div>
     );
@@ -62,7 +67,7 @@ function DesktopNavbar() {
                 <div className="flex h-[80px] min-h-[60px] items-center gap-x-4">
                     <Logo />
                     <div className="flex h-full">
-                        {items.map((item) => (
+                        {items.map(item => (
                             <NavbarItem
                                 key={item.label}
                                 link={item.link}
