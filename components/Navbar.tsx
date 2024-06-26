@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import React from 'react'
 import { buttonVariants } from './ui/button';
 import { UserButton } from '@clerk/nextjs';
+import { ThemeSwitcherBtn } from '@/components/ThemeSwitcherBtn';
 
 function Navbar() {
   return (
