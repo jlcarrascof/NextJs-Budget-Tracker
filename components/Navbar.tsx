@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 import { Button, buttonVariants } from '@/components/ui/button';
 import { UserButton } from '@clerk/nextjs';
 import { ThemeSwitcherBtn } from '@/components/ThemeSwitcherBtn';
-import { Sheet, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
 function Navbar() {
@@ -37,6 +37,12 @@ function MobileNavbar() {
                             <Menu />
                         </Button>
                     </SheetTrigger>
+                    <SheetContent className="w-[400px] sm:w-[540px]" side="left">
+                        <Logo />
+                        <div className="flex flex-col gap-1 pt-4">
+
+                        </div>
+                    </SheetContent>
                 </Sheet>
             </nav>
         </div>
