@@ -45,6 +45,7 @@ function MobileNavbar() {
                                     key={item.label}
                                     link={item.link}
                                     label={item.label}
+                                    onClick={() => setIsOpen((prev) => !prev)}
                                 />
                             ))}
                         </div>
@@ -87,7 +88,7 @@ function DesktopNavbar() {
     );
 }
 
-function NavbarItem({ link, label }: { link: string; label: string }) {
+function NavbarItem({ link, label, onClick }: { link: string; label: string; onClick? : () => void }) {
     const pathname = usePathname();
     const isActive = pathname === link;
 
@@ -98,6 +99,9 @@ function NavbarItem({ link, label }: { link: string; label: string }) {
                 "w-full justify-start text-lg text-muted-foreground hover:text-foreground",
                 isActive && "text-foreground"
             )}
+            onClick={() => {
+                if (onClick) onClick();
+            }}
         >
             {label}
         </Link>
