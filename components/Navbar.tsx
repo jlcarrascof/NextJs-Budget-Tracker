@@ -40,7 +40,13 @@ function MobileNavbar() {
                     <SheetContent className="w-[400px] sm:w-[540px]" side="left">
                         <Logo />
                         <div className="flex flex-col gap-1 pt-4">
-
+                            {items.map((item) => (
+                                <NavbarItem
+                                    key={item.label}
+                                    link={item.link}
+                                    label={item.label}
+                                />
+                            ))}
                         </div>
                     </SheetContent>
                 </Sheet>
