@@ -1,5 +1,5 @@
 "use client";
-import Logo from '@/components/Logo';
+import Logo, { LogoMobile } from '@/components/Logo';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -51,7 +51,7 @@ function MobileNavbar() {
                     </SheetContent>
                 </Sheet>
                 <div className="flex h-[80px] min-h-[60px] items-center gap-x-4">
-                    <Logo />
+                    <LogoMobile />
                 </div>
                 <div className="flex items-center gap-2">
                     <ThemeSwitcherBtn />
