@@ -45,7 +45,7 @@ function MobileNavbar() {
                                     key={item.label}
                                     link={item.link}
                                     label={item.label}
-                                    onClick={() => setIsOpen((prev) => !prev)}
+                                    clickCallback={() => setIsOpen((prev) => !prev)}
                                 />
                             ))}
                         </div>
@@ -88,7 +88,7 @@ function DesktopNavbar() {
     );
 }
 
-function NavbarItem({ link, label, onClick }: { link: string; label: string; onClick? : () => void }) {
+function NavbarItem({ link, label, clickCallback }: { link: string; label: string; clickCallback? : () => void }) {
     const pathname = usePathname();
     const isActive = pathname === link;
 
@@ -100,7 +100,7 @@ function NavbarItem({ link, label, onClick }: { link: string; label: string; onC
                 isActive && "text-foreground"
             )}
             onClick={() => {
-                if (onClick) onClick();
+                if (clickCallback) clickCallback();
             }}
         >
             {label}
