@@ -53,3 +53,13 @@ model MonthHistory {
 
   @@id([day, month, year, userId])
 }
+
+model YearHistory {
+  userId       String
+  month        Int
+  year         Int
+  income       Float
+  expense      Float
+
+  @@id([month, year, userId])
+}
