@@ -14,6 +14,16 @@ datasource db {
 }
 
 model UserSettings {
-  userId    String@id
+  userId    String @id
   currency  String
+}
+
+model Category {
+  createdAt DateTime @default(now())
+  name      String
+  userId    String
+  icon      String
+  type      String  @default("income")
+
+  @@unique([name, userId, type])
 }
